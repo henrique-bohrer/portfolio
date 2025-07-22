@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang-key="pageTitle">Henrique Bressiani Bohrer - Desenvolvedor Web</title>
+  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo" data-lang-key="navLogo">Portfólio</a>
+      <div id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero" data-lang-key="navHome">Início</a></li>
+        <li><a href="#about" data-lang-key="navAbout">Sobre</a></li>
+        <li><a href="#skills" data-lang-key="navSkills">Habilidades</a></li>
+        <li><a href="#experience" data-lang-key="navExperience">Experiência</a></li>
+        <li><a href="#certifications" data-lang-key="navCertifications">Certificações</a></li>
+        <li><a href="#projects" data-lang-key="navProjects">Projetos</a></li>
+        <li><a href="#contact" data-lang-key="navContact">Contato</a></li>
+      </ul>
+
+      <div class="language-selector">
+        <button class="lang-button" aria-haspopup="true" aria-expanded="false">
+          <i class="fa-solid fa-globe"></i>
+          <span id="current-lang">PT-BR</span>
+          <i class="fa-solid fa-chevron-down arrow"></i>
+        </button>
+        <ul class="lang-dropdown">
+          <li><a href="#" data-lang="pt-BR">Português (BR)</a></li>
+          <li><a href="#" data-lang="en-US">English (US)</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <main>
+    <section id="hero">
+      <div class="hero-content">
+        <h1 data-lang-key="heroTitle">Olá, eu sou Henrique Bressiani Bohrer</h1>
+        <p data-lang-key="heroSubtitle">Desenvolvedor Web e futuro Analista de Dados, focado em criar experiências
+          digitais incríveis.</p>
+        <a href="#projects" class="btn" data-lang-key="heroButton">Meus Projetos</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 data-lang-key="aboutTitle">Sobre Mim</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="https://via.placeholder.com/350" alt="Foto de Henrique Bressiani Bohrer">
+          </div>
+          <div class="about-text">
+            <h3 data-lang-key="aboutSubtitle">Busco oportunidades em Dados e Tecnologia.</h3>
+            <p data-lang-key="aboutDescription">Meu objetivo é aprimorar continuamente minhas competências técnicas e
+              analíticas. Tenho como principal foco a análise, visualização e interpretação de dados, buscando
+              contribuir de forma estratégica para a tomada de decisões nas organizações.</p>
+            <a href="src/curriculo-henrique-bohrer.pdf" target="_blank" class="btn" data-lang-key="aboutButton">Download
+              CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2 data-lang-key="skillsTitle">Minhas Habilidades</h2>
+        <div class="skills-grid">
+          <div class="skill-card"><i class="devicon-php-plain"></i><span>PHP</span></div>
+          <div class="skill-card"><i class="devicon-html5-plain-wordmark"></i><span>HTML5</span></div>
+          <div class="skill-card"><i class="devicon-css3-plain-wordmark"></i><span>CSS3</span></div>
+          <div class="skill-card"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+          <div class="skill-card"><i class="devicon-python-plain"></i><span>Python</span></div>
+          <div class="skill-card"><i class="devicon-mysql-plain-wordmark"></i><span>MySQL</span></div>
+          <div class="skill-card"><i class="devicon-git-plain"></i><span>Git</span></div>
+          <div class="skill-card"><i class="fa-solid fa-chart-simple"></i><span>Power BI</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <h2 data-lang-key="experienceTitle">Experiência e Educação</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date" data-lang-key="exp1Date">Junho 2025 - Presente</div>
+            <div class="timeline-content">
+              <h3 data-lang-key="exp1Title">Estagiário de TI</h3>
+              <p>TDF - Trilha do Futebol</p>
+              <p data-lang-key="exp1Description">Auxílio no suporte técnico, manutenção de equipamentos e
+                desenvolvimento de soluções internas.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date" data-lang-key="exp2Date">Abril 2024 - Maio 2025</div>
+            <div class="timeline-content">
+              <h3 data-lang-key="exp2Title">Auxiliar Administrativo</h3>
+              <p>Nova Consultoria em Viagens</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date" data-lang-key="edu1Date">Cursando (5º Período)</div>
+            <div class="timeline-content">
+              <h3 data-lang-key="edu1Title">Análise e Desenvolvimento de Sistemas</h3>
+              <p>UniOPET, Curitiba</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date" data-lang-key="edu2Date">Concluído em Julho 2025</div>
+            <div class="timeline-content">
+              <h3 data-lang-key="edu2Title">Curso de Analista de BI</h3>
+              <p>Escola DNC (EAD)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <div class="container">
+        <h2 data-lang-key="certificationsTitle">Certificações</h2>
+        <div class="certifications-grid">
+          <div class="certification-card">
+            <div class="certification-image-container">
+              <img src="src/images/certificado-analista-bi-preview.jpg" alt="Prévia do Certificado de Analista de BI">
+            </div>
+            <div class="certification-info">
+              <h3 data-lang-key="cert1Title">Analista de BI</h3>
+              <p>Escola DNC</p>
+              <a href="src/analista-de-bi.pdf" target="_blank" class="btn-secondary" data-lang-key="certButton">Ver
+                Certificado</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 data-lang-key="projectsTitle">Meus Projetos</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img src="src/images/projeto-quiz-prog.jpg" alt="Preview do Projeto Quiz de Programação">
+            <div class="project-info">
+              <h3 data-lang-key="proj1Title">Quiz de Programação</h3>
+              <p data-lang-key="proj1Description">Uma aplicação web interativa para testar conhecimentos em diversas
+                áreas da programação.</p>
+              <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <div class="project-links">
+                <a href="https://quiz-prog.netlify.app/" target="_blank" class="btn" data-lang-key="projButtonLive">Ver
+                  ao Vivo</a>
+                <a href="https://github.com/henrique-bohrer" target="_blank" class="btn-secondary">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="src/images/projeto-dekor-ai.jpg" alt="Preview do Projeto Dekor AI">
+            <div class="project-info">
+              <h3 data-lang-key="proj2Title">Hackathon PUC (2024) - Dekor AI</h3>
+              <p data-lang-key="proj2Description">Projeto para a Kapazi com o objetivo de criar um site que utiliza IA
+                para gerar imagens realistas de pisos vinílicos.</p>
+              <div class="project-tech"><span>WebNode</span><span>IA (Conceito)</span></div>
+              <div class="project-links">
+                <a href="https://dekor-ai.webnode.page/" target="_blank" class="btn" data-lang-key="projButtonLive">Ver
+                  ao Vivo</a>
+                <a href="https://github.com/henrique-bohrer" target="_blank" class="btn-secondary">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 data-lang-key="contactTitle">Entre em Contato</h2>
+        <p class="contact-subtitle" data-lang-key="contactSubtitle">Estou aberto a novas oportunidades e colaborações.
+          Sinta-se à vontade para me contatar!</p>
+        <div class="contact-info-grid">
+          <a href="mailto:henrique300415@gmail.com" class="contact-item"><i
+              class="fa-solid fa-envelope"></i><span>henrique300415@gmail.com</span></a>
+          <a href="https://www.linkedin.com/in/henrique-bressiani-bohrer-9457a5207/" target="_blank"
+            class="contact-item"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
+          <a href="https://github.com/henrique-bohrer" target="_blank" class="contact-item"><i
+              class="fa-brands fa-github"></i><span>GitHub</span></a>
+          <a href="tel:+5549984287347" class="contact-item"><i class="fa-solid fa-phone"></i><span>(49)
+              98428-7347</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="src/script.js" defer></script>
+</body>
+
+</html>
