@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-lang-key="pageTitle">Henrique Bressiani Bohrer - Desenvolvedor Web</title>
+  <title>Henrique Bressiani Bohrer - Desenvolvedor & Analista de Dados</title>
   <link rel="stylesheet" href="src/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -12,204 +12,212 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="logo" data-lang-key="navLogo">Portfólio</a>
+  <div class="fixed-elements-left">
+    <ul class="social-links">
+      <li><a href="https://github.com/henrique-bohrer" target="_blank" aria-label="GitHub"><i
+            class="fa-brands fa-github"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/henrique-bressiani-bohrer-9457a5207/" target="_blank"
+          aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+      <li><a href="https://wa.me/5549984287347" target="_blank" aria-label="WhatsApp"><i
+            class="fa-brands fa-whatsapp"></i></a></li>
+      <li><a href="https://www.instagram.com/henriquebbohrer/" target="_blank" aria-label="Instagram"><i
+            class="fa-brands fa-instagram"></i></a></li>
+    </ul>
+  </div>
+  <div class="fixed-elements-right">
+    <a href="mailto:henrique300415@gmail.com" class="email-link">henrique300415@gmail.com</a>
+  </div>
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="#" class="logo">H.</a>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#experience">Jornada</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#resume">Currículo</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
       <div id="menu-toggle">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
-
-      <ul class="nav-links">
-        <li><a href="#hero" data-lang-key="navHome">Início</a></li>
-        <li><a href="#about" data-lang-key="navAbout">Sobre</a></li>
-        <li><a href="#skills" data-lang-key="navSkills">Habilidades</a></li>
-        <li><a href="#experience" data-lang-key="navExperience">Experiência</a></li>
-        <li><a href="#certifications" data-lang-key="navCertifications">Certificações</a></li>
-        <li><a href="#projects" data-lang-key="navProjects">Projetos</a></li>
-        <li><a href="#contact" data-lang-key="navContact">Contato</a></li>
-
-        <li class="language-selector">
-          <button class="lang-button" aria-haspopup="true" aria-expanded="false">
-            <i class="fa-solid fa-globe"></i>
-            <span id="current-lang">PT-BR</span>
-            <i class="fa-solid fa-chevron-down arrow"></i>
-          </button>
-          <ul class="lang-dropdown">
-            <li><a href="#" data-lang="pt-BR">Português (BR)</a></li>
-            <li><a href="#" data-lang="en-US">English (US)</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <main>
-    <section id="hero">
-      <div class="hero-content">
-        <h1 data-lang-key="heroTitle">Olá, eu sou Henrique Bressiani Bohrer</h1>
-        <p data-lang-key="heroSubtitle">Desenvolvedor Web e futuro Analista de Dados, focado em criar experiências
-          digitais incríveis.</p>
-        <a href="#projects" class="btn" data-lang-key="heroButton">Meus Projetos</a>
-      </div>
-    </section>
+    <div class="container">
+      <section id="hero" class="section">
+        <p class="hero-intro">Oi, meu nome é</p>
+        <h1 class="hero-title">Henrique Bressiani Bohrer.</h1>
+        <h2 class="hero-subtitle">Transformo ideias em web e dados em insights.</h2>
+        <p class="hero-description">
+          Atuo como desenvolvedor e aspirante a analista de dados, combinando a paixão por criar interfaces elegantes
+          com a curiosidade de encontrar histórias nos números.
+        </p>
+        <a href="#projects" class="btn">Conheça meus trabalhos</a>
+      </section>
 
-    <section id="about">
-      <div class="container">
-        <h2 data-lang-key="aboutTitle">Sobre Mim</h2>
+      <section id="about" class="section">
+        <h2 class="section-title">Sobre Mim</h2>
         <div class="about-content">
-          <div class="about-image">
-            <img src="https://via.placeholder.com/350" alt="Foto de Henrique Bressiani Bohrer">
-          </div>
           <div class="about-text">
-            <h3 data-lang-key="aboutSubtitle">Busco oportunidades em Dados e Tecnologia.</h3>
-            <p data-lang-key="aboutDescription">Meu objetivo é aprimorar continuamente minhas competências técnicas e
-              analíticas. Tenho como principal foco a análise, visualização e interpretação de dados, buscando
-              contribuir de forma estratégica para a tomada de decisões nas organizações.</p>
-            <a href="src/curriculo-henrique-bohrer.pdf" target="_blank" class="btn" data-lang-key="aboutButton">Download
-              CV</a>
+            <p>Desde o início da minha jornada na tecnologia, sou movido pela curiosidade. Gosto de entender como as
+              coisas funcionam e, mais importante, como posso fazê-las funcionar melhor. Hoje, meu foco se divide entre
+              duas grandes paixões: o desenvolvimento de aplicações web que as pessoas gostem de usar e a análise de
+              dados para descobrir padrões e guiar decisões inteligentes.</p>
+            <p>Estas são algumas das ferramentas que uso no meu dia a dia:</p>
+            <ul class="skills-list">
+              <li>JavaScript (ES6+)</li>
+              <li>PHP</li>
+              <li>HTML & CSS</li>
+              <li>Python</li>
+              <li>MySQL</li>
+              <li>Power BI</li>
+            </ul>
+          </div>
+          <div class="about-image">
+            <img src="https://via.placeholder.com/300" alt="Foto de Henrique Bressiani Bohrer">
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="skills">
-      <div class="container">
-        <h2 data-lang-key="skillsTitle">Minhas Habilidades</h2>
-        <div class="skills-grid">
-          <div class="skill-card"><i class="devicon-php-plain"></i><span>PHP</span></div>
-          <div class="skill-card"><i class="devicon-html5-plain-wordmark"></i><span>HTML5</span></div>
-          <div class="skill-card"><i class="devicon-css3-plain-wordmark"></i><span>CSS3</span></div>
-          <div class="skill-card"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
-          <div class="skill-card"><i class="devicon-python-plain"></i><span>Python</span></div>
-          <div class="skill-card"><i class="devicon-mysql-plain-wordmark"></i><span>MySQL</span></div>
-          <div class="skill-card"><i class="devicon-git-plain"></i><span>Git</span></div>
-          <div class="skill-card"><i class="fa-solid fa-chart-simple"></i><span>Power BI</span></div>
-        </div>
-      </div>
-    </section>
+<section id="experience" class="section">
+  <h2 class="section-title">Minha Jornada</h2>
 
-    <section id="experience">
-      <div class="container">
-        <h2 data-lang-key="experienceTitle">Experiência e Educação</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date" data-lang-key="exp1Date">Junho 2025 - Presente</div>
-            <div class="timeline-content">
-              <h3 data-lang-key="exp1Title">Estagiário de TI</h3>
-              <p>TDF - Trilha do Futebol</p>
-              <p data-lang-key="exp1Description">Auxílio no suporte técnico, manutenção de equipamentos e
-                desenvolvimento de soluções internas.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date" data-lang-key="exp2Date">Abril 2024 - Maio 2025</div>
-            <div class="timeline-content">
-              <h3 data-lang-key="exp2Title">Auxiliar Administrativo</h3>
-              <p>Nova Consultoria em Viagens</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date" data-lang-key="edu1Date">Cursando (5º Período)</div>
-            <div class="timeline-content">
-              <h3 data-lang-key="edu1Title">Análise e Desenvolvimento de Sistemas</h3>
-              <p>UniOPET, Curitiba</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date" data-lang-key="edu2Date">Concluído em Julho 2025</div>
-            <div class="timeline-content">
-              <h3 data-lang-key="edu2Title">Curso de Analista de BI</h3>
-              <p>Escola DNC (EAD)</p>
-            </div>
-          </div>
-        </div>
+  <div class="experience-timeline">
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fa-solid fa-briefcase"></i>
       </div>
-    </section>
-
-    <section id="certifications">
-      <div class="container">
-        <h2 data-lang-key="certificationsTitle">Certificações</h2>
-        <div class="certifications-grid">
-          <div class="certification-card">
-            <div class="certification-image-container">
-              <img src="src/images/certificado-analista-bi-preview.jpg" alt="Prévia do Certificado de Analista de BI">
-            </div>
-            <div class="certification-info">
-              <h3 data-lang-key="cert1Title">Analista de BI</h3>
-              <p>Escola DNC</p>
-              <a href="src/analista-de-bi.pdf" target="_blank" class="btn-secondary" data-lang-key="certButton">Ver
-                Certificado</a>
-            </div>
-          </div>
-        </div>
+      <div class="timeline-content">
+        <p class="timeline-date">Julho 2025 - Presente</p>
+        <h3 class="timeline-title">Estagiário de TI <span class="timeline-company">@ TDF</span></h3>
+        <p class="timeline-description">Prestando suporte técnico e colaborando no desenvolvimento de soluções para
+          otimizar processos internos.</p>
       </div>
-    </section>
+    </div>
 
-    <section id="projects">
-      <div class="container">
-        <h2 data-lang-key="projectsTitle">Meus Projetos</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <img src="src/images/projeto-quiz-prog.jpg" alt="Preview do Projeto Quiz de Programação">
-            <div class="project-info">
-              <h3 data-lang-key="proj1Title">Quiz de Programação</h3>
-              <p data-lang-key="proj1Description">Uma aplicação web interativa para testar conhecimentos em diversas
-                áreas da programação.</p>
-              <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+      <div class="timeline-content">
+        <p class="timeline-date">Cursando - 5º Período</p>
+        <h3 class="timeline-title">Análise e Desenvolvimento de Sistemas <span class="timeline-company">@ UniOPET</span>
+        </h3>
+        <p class="timeline-description">Aplicando conceitos de engenharia de software em projetos práticos e
+          aprofundando conhecimentos em PHP, Python, JavaScript e MySQL.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+      <div class="timeline-content">
+        <p class="timeline-date">Concluído</p>
+        <h3 class="timeline-title">Curso de Analista de BI <span class="timeline-company">@ Escola DNC</span></h3>
+        <p class="timeline-description">Capacitação focada em transformar dados brutos em dashboards interativos para
+          suportar decisões de negócio.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fa-solid fa-briefcase"></i>
+      </div>
+      <div class="timeline-content">
+        <p class="timeline-date">2023 - 2025</p>
+        <h3 class="timeline-title">Atendimento ao Cliente <span class="timeline-company">@ SoftMarketing</span></h3>
+        <p class="timeline-description">Desenvolvi habilidades de comunicação e resolução de problemas no atendimento
+          direto ao cliente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section id="projects" class="section">
+        <h2 class="section-title">Projetos que Tive Orgulho de Construir</h2>
+        <ul class="projects-grid">
+          <li class="project-card">
+            <div class="project-card-header">
+              <div class="project-icon"><img src="src/images/dekor-ai.png" alt="Logo Dekor AI" class="project-logo">
+              </div>
+              <div class="project-links"><a href="https://dekor-ai.webnode.page/" target="_blank" aria-label="Live Demo"
+                  title="Ver ao Vivo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title"><a href="https://dekor-ai.webnode.page/" target="_blank">Hackathon - Dekor
+                  AI</a></h3>
+              <p class="project-description">Durante um Hackathon, colaborei na criação de um site-conceito que usaria
+                IA para visualizar pisos vinílicos em um ambiente real através da câmera do usuário.</p>
+            </div>
+            <div class="project-card-footer">
+              <ul class="project-tech-list">
+                <li>WebNode</li>
+                <li>IA (Conceito)</li>
+              </ul>
+            </div>
+          </li>
+          <li class="project-card">
+            <div class="project-card-header">
+              <div class="project-icon"><img src="src/images/quiz-prog.png" alt="Logo QuizProg" class="project-logo">
+              </div>
               <div class="project-links">
-                <a href="https://quiz-prog.netlify.app/" target="_blank" class="btn" data-lang-key="projButtonLive">Ver
-                  ao Vivo</a>
-                <a href="https://github.com/henrique-bohrer" target="_blank" class="btn-secondary">GitHub</a>
+                <a href="https://github.com/henrique-bohrer" target="_blank" aria-label="GitHub"
+                  title="Ver no GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://quiz-prog.netlify.app/" target="_blank" aria-label="Live Demo" title="Ver ao Vivo"><i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
               </div>
             </div>
-          </div>
-          <div class="project-card">
-            <img src="src/images/projeto-dekor-ai.jpg" alt="Preview do Projeto Dekor AI">
-            <div class="project-info">
-              <h3 data-lang-key="proj2Title">Hackathon PUC (2024) - Dekor AI</h3>
-              <p data-lang-key="proj2Description">Projeto para a Kapazi com o objetivo de criar um site que utiliza IA
-                para gerar imagens realistas de pisos vinílicos.</p>
-              <div class="project-tech"><span>WebNode</span><span>IA (Conceito)</span></div>
-              <div class="project-links">
-                <a href="https://dekor-ai.webnode.page/" target="_blank" class="btn" data-lang-key="projButtonLive">Ver
-                  ao Vivo</a>
-                <a href="https://github.com/henrique-bohrer" target="_blank" class="btn-secondary">GitHub</a>
-              </div>
+            <div class="project-card-body">
+              <h3 class="project-title"><a href="https://quiz-prog.netlify.app/" target="_blank">Quiz de Programação</a>
+              </h3>
+              <p class="project-description">Desenvolvi um quiz interativo para ajudar outros entusiastas da programação
+                a testar e aprimorar seus conhecimentos de forma divertida.</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="project-card-footer">
+              <ul class="project-tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-    <section id="contact">
-      <div class="container">
-        <h2 data-lang-key="contactTitle">Entre em Contato</h2>
-        <p class="contact-subtitle" data-lang-key="contactSubtitle">Estou aberto a novas oportunidades e colaborações.
-          Sinta-se à vontade para me contatar!</p>
-        <div class="contact-info-grid">
-          <a href="mailto:henrique300415@gmail.com" class="contact-item"><i
-              class="fa-solid fa-envelope"></i><span>henrique300415@gmail.com</span></a>
-          <a href="https://www.linkedin.com/in/henrique-bressiani-bohrer-9457a5207/" target="_blank"
-            class="contact-item"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
-          <a href="https://github.com/henrique-bohrer" target="_blank" class="contact-item"><i
-              class="fa-brands fa-github"></i><span>GitHub</span></a>
-          <a href="tel:+5549984287347" class="contact-item"><i class="fa-solid fa-phone"></i><span>(49)
-              98428-7347</span></a>
+      <section id="resume" class="section">
+        <h2 class="section-title">Meu Currículo</h2>
+        <div class="resume-content">
+          <p>Quer todos os detalhes da minha trajetória em um formato mais tradicional? Meu currículo completo está a um
+            clique de distância.</p>
+          <a href="src/curriculo-henrique-bohrer.pdf" target="_blank" class="btn">
+            <i class="fa-solid fa-download"></i> Baixar Currículo
+          </a>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section id="contact" class="section">
+        <h2 class="section-title center">E agora?</h2>
+        <p class="contact-text">Atualmente estou buscando novas oportunidades e adoraria ouvir sobre projetos
+          interessantes. Se você tem uma ideia, uma pergunta ou apenas quer dizer um "oi", meu inbox está sempre aberto!
+        </p>
+        <a href="mailto:henrique300415@gmail.com" class="btn">Mande uma mensagem</a>
+      </section>
+    </div>
   </main>
+
+  <footer class="footer">
+    <p>Projetado e desenvolvido por Henrique Bressiani Bohrer</p>
+  </footer>
 
   <script src="src/script.js" defer></script>
 </body>
