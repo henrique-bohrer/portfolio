@@ -20,6 +20,8 @@
   --clr-secondary-text: #8892b0;
   --clr-accent: #64ffda;
   --clr-accent-dark: #52d9bc;
+  --clr-accent-hover: #52d9bc; /* Tom mais escuro para hover */
+  --clr-primary-text-hover: #ccd6f6e6; /* Suavizar texto */
 
   /* Tipografia */
   --font-primary: 'Inter', sans-serif;
@@ -68,7 +70,7 @@ img { max-width: 100%; display: block; }
    3. LAYOUT E COMPONENTES
    ========================================================================== */
 .section {
-    padding: 100px 0;
+    padding: 2.5rem 0;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
@@ -79,7 +81,7 @@ img { max-width: 100%; display: block; }
 }
 
 .btn {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -89,11 +91,13 @@ img { max-width: 100%; display: block; }
     padding: 1.25rem 1.75rem;
     border-radius: 4px;
     text-decoration: none;
-    transition: all var(--transition-duration) ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-size: var(--fs-sm);
 }
 .btn:hover {
     background-color: rgba(100, 255, 218, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
 }
 
 .section-title {
@@ -117,10 +121,11 @@ img { max-width: 100%; display: block; }
     display: block;
     width: 100%;
     height: 1px;
-    background-color: var(--clr-surface);
+    background-color: var(--clr-accent);
 }
 .section-title.center { justify-content: center; }
 .section-title.center::after { display: none; }
+
 
 /* ==========================================================================
    4. HEADER E ELEMENTOS FIXOS
@@ -155,13 +160,13 @@ img { max-width: 100%; display: block; }
 .nav-links a.active {
     color: var(--clr-accent);
 }
-
+a:hover, .btn:hover { color: var(--clr-accent-hover); }
 .fixed-elements-left, .fixed-elements-right { position: fixed; bottom: 0; z-index: 10; display: flex; flex-direction: column; align-items: center; gap: 20px; }
 .fixed-elements-left { left: 40px; }
 .fixed-elements-right { right: 40px; }
 .fixed-elements-left::after, .fixed-elements-right::after { content: ''; display: block; width: 1px; height: 90px; background-color: var(--clr-secondary-text); }
 .social-links a { font-size: var(--fs-xl); color: var(--clr-secondary-text); transition: all var(--transition-duration) ease; }
-.social-links a:hover { color: var(--clr-accent); transform: translateY(-3px); }
+.social-links a:hover { color: var(--clr-accent); transform: translateY(-3px); animation: pulse 1s infinite; }
 .email-link { writing-mode: vertical-rl; font-size: var(--fs-sm); letter-spacing: 0.1em; color: var(--clr-secondary-text); text-decoration: none; transition: all var(--transition-duration) ease; }
 .email-link:hover { color: var(--clr-accent); transform: translateY(-3px); }
 
@@ -177,50 +182,57 @@ img { max-width: 100%; display: block; }
 .skills-list { display: grid; grid-template-columns: repeat(2, minmax(140px, 200px)); gap: 10px; margin-top: 20px; }
 .skills-list li { position: relative; padding-left: 20px; font-size: var(--fs-sm); }
 .skills-list li::before { content: '▹'; position: absolute; left: 0; color: var(--clr-accent); }
+
+/* --- ESTILOS ATUALIZADOS PARA A FOTO DE PERFIL --- */
 .about-image {
     max-width: 300px;
     position: relative;
     border-radius: 4px;
-    background-color: var(--clr-accent); /* Cor de fundo caso a imagem demore a carregar */
 }
-
+.about-image::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    border: 2px solid var(--clr-accent);
+    top: 20px;
+    left: 20px;
+    transition: all var(--transition-duration) ease;
+    z-index: -2;
+}
 .about-image::after {
     content: '';
     display: block;
     position: absolute;
     width: 100%;
     height: 100%;
-    border: 2px solid var(--clr-accent);
-    top: 20px;
-    left: 20px;
     border-radius: 4px;
-    z-index: -1;
+    background-color: var(--clr-surface);
+    opacity: 0.5;
+    top: 10px;
+    left: 10px;
     transition: all var(--transition-duration) ease;
+    z-index: -1;
 }
-
-/* A imagem em si */
 .about-image img {
     position: relative;
     border-radius: 4px;
-    mix-blend-mode: multiply; /* Efeito de cor interessante */
-    filter: grayscale(100%) contrast(1);
     transition: all var(--transition-duration) ease;
 }
-
-/* EFEITO HOVER */
-.about-image:hover img {
-    filter: none;
-    mix-blend-mode: normal;
-}
-
-.about-image:hover::after {
+.about-image:hover::before {
     top: 15px;
     left: 15px;
 }
+.about-image:hover::after {
+    top: 5px;
+    left: 5px;
+}
 
-/* --- SEÇÃO DE EXPERIÊNCIA - DESIGN DE TIMELINE CENTRAL --- */
+/* --- SEÇÃO DE EXPERIÊNCIA (TIMELINE) --- */
 .experience-timeline { position: relative; max-width: 800px; margin-inline: auto; }
-.experience-timeline::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); height: 100%; width: 2px; background-color: var(--clr-accent); }
+.experience-timeline::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); height: 100%; width: 2px; background-color: var(--clr-accent-dark); }
 .timeline-item { padding: 10px 40px; position: relative; width: 50%; margin-bottom: 50px; }
 .timeline-item:nth-child(odd) { left: 0; padding-right: 60px; text-align: right; }
 .timeline-item:nth-child(even) { left: 50%; padding-left: 60px; }
@@ -232,12 +244,38 @@ img { max-width: 100%; display: block; }
 .timeline-title { font-size: var(--fs-xl); margin-bottom: 10px; }
 .timeline-title .timeline-company { color: var(--clr-accent); }
 .timeline-description { font-size: var(--fs-base); line-height: 1.7; }
+.timeline-title-link {
+    text-decoration: none;
+    display: inline-block; /* Garante que o hover funcione bem */
+}
 
+.timeline-title-link .link-icon {
+    font-size: 1rem;
+    color: var(--clr-secondary-text);
+    transition: all var(--transition-duration) ease;
+    display: inline-block;
+    opacity: 0; /* Começa invisível */
+    transform: translate(-5px, -5px);
+}
+
+/* Efeito Hover */
+.timeline-title-link:hover .timeline-title,
+.timeline-title-link:hover .timeline-company {
+    color: var(--clr-accent);
+}
+
+.timeline-title-link:hover .link-icon {
+    color: var(--clr-accent);
+    opacity: 1; /* Fica visível */
+    transform: translate(0, 0);
+}
+
+/* --- SEÇÃO DE PROJETOS --- */
 #projects .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
 .project-card { background-color: var(--clr-surface); padding: 2rem; display: flex; flex-direction: column; gap: 20px; transition: all var(--transition-duration) ease; }
-.project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7); }
+.project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7); background: linear-gradient(to bottom, rgba(100, 255, 218, 0.05), var(--clr-surface));}
 .project-card-header { display: flex; justify-content: space-between; align-items: flex-start; }
-.project-logo { width: 60px; height: auto; }
+.project-logo { width: 15rem; height: auto; margin-top: -3.5rem;}
 .project-links { display: flex; gap: 15px; }
 .project-links a { color: var(--clr-secondary-text); font-size: var(--fs-xl); }
 .project-links a:hover { color: var(--clr-accent); }
@@ -248,39 +286,61 @@ img { max-width: 100%; display: block; }
 .project-card-footer { margin-top: auto; }
 .project-tech-list { display: flex; flex-wrap: wrap; gap: 15px; font-family: monospace; font-size: var(--fs-sm); color: var(--clr-secondary-text); }
 
+/* --- SEÇÃO DE CURRÍCULO (RESUME) --- */
 #resume { text-align: center; }
 #resume .resume-content { max-width: 700px; margin-inline: auto; display: flex; flex-direction: column; align-items: center; gap: 30px; }
 
+/* --- SEÇÃO DE CONTATO E RODAPÉ --- */
 #contact { text-align: center; }
 .contact-text { max-width: 600px; margin-inline: auto; margin-bottom: 50px; }
 .footer { padding: 25px; text-align: center; font-size: var(--fs-sm); }
+.footer-social { display: none; }
 
 /* ==========================================================================
-   6. MEDIA QUERIES
+   6. MEDIA QUERIES (RESPONSIVIDADE)
    ========================================================================== */
 @media(max-width: 1080px) { main { padding: 0 100px; } }
+
 @media (max-width: 768px) {
     main { padding: 0 25px; }
     .fixed-elements-left, .fixed-elements-right { display: none; }
-    .header { padding: 0 25px; }
-    .nav-links { display: none; }
+    .header { padding: 0 25px; height: 80px; }
+    .logo { display: none; }
+    .navbar { justify-content: flex-end; }
     #menu-toggle { display: block; }
+    .nav-links { display: none; }
+    .nav-links.active {
+        display: flex;
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        background-color: var(--clr-surface);
+        transform: translateX(100%);
+        transition: transform var(--transition-duration) ease-in-out;
+        padding: 0;
+    }
+    .nav-links.active { transform: translateX(0%); }
+    .nav-links li { margin: 0; }
+    .nav-links a::before { display: none; }
     #about .about-content { display: block; }
-    .about-image { margin: 50px auto; }
+    .about-image { margin: 50px auto 0; }
+    .experience-timeline { padding-left: 0; }
     .experience-timeline::before { left: 20px; }
     .timeline-item, .timeline-item:nth-child(even) { width: 100%; left: 0; padding-left: 60px; padding-right: 20px; text-align: left; }
-    .timeline-icon, .timeline-item:nth-child(odd) .timeline-icon, .timeline-item:nth-child(even) .timeline-icon { left: 0; }
+    .timeline-icon, .timeline-item:nth-child(odd) .timeline-icon, .timeline-item:nth-child(even) .timeline-icon { left: -2px; }
+    .section-title { white-space: normal; }
+    .footer { padding: 50px 0; }
+    .footer-social { display: flex; justify-content: center; gap: 30px; margin-bottom: 25px; font-size: 1.5rem; }
+    .footer-social a { color: var(--clr-secondary-text); }
+    .footer-social a:hover { color: var(--clr-accent); }
 }
 
 /* Estilos do Menu Hambúrguer (Mobile) */
-#menu-toggle { display: none; cursor: pointer; z-index: 12; }
+#menu-toggle { display: none; cursor: pointer; z-index: 12; padding: 10px; }
 #menu-toggle .bar { width: 25px; height: 2px; background-color: var(--clr-accent); margin: 6px 0; transition: all var(--transition-duration) ease; }
 #menu-toggle.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
 #menu-toggle.active .bar:nth-child(2) { opacity: 0; }
 #menu-toggle.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-
-@media (max-width: 768px) {
-    .nav-links { display: flex; position: fixed; inset: 0 0 0 30%; flex-direction: column; justify-content: center; align-items: center; gap: 2rem; background-color: var(--clr-surface); transform: translateX(100%); transition: transform var(--transition-duration) ease-in-out; }
-    .nav-links.active { transform: translateX(0%); }
-    .nav-links li { margin: 0; }
-}

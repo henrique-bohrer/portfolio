@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.15 });
     sections.forEach(section => { fadeInObserver.observe(section); });
 
-
     // --- Lógica do Header (Esconder/Mostrar e Sombra) ---
     let lastScrollY = window.scrollY;
     const header = document.querySelector('.header');
@@ -29,30 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             header.classList.remove('scrolled');
         }
-    });
-
-    // --- Lógica das Abas de Experiência ---
-    const tabs = document.querySelectorAll('.tab-button');
-    const tabPanels = document.querySelectorAll('.tab-panel');
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            tabs.forEach(item => {
-                item.classList.remove('active');
-                item.setAttribute('aria-selected', 'false');
-            });
-            tabPanels.forEach(panel => {
-                panel.classList.remove('active');
-            });
-
-            tab.classList.add('active');
-            tab.setAttribute('aria-selected', 'true');
-
-            const targetPanelId = tab.getAttribute('aria-controls');
-            const targetPanel = document.getElementById(targetPanelId);
-            if(targetPanel) {
-                targetPanel.classList.add('active');
-            }
-        });
     });
 
     // --- Efeito de glow no fundo que segue o mouse ---
@@ -82,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinksContainer = document.querySelector('.nav-links');
     if (menuToggle) {
         menuToggle.addEventListener('click', () => {
-            const isOpened = menuToggle.classList.toggle('active');
+            menuToggle.classList.toggle('active');
             navLinksContainer.classList.toggle('active');
         });
     }
