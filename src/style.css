@@ -100,6 +100,22 @@ img { max-width: 100%; display: block; }
     box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
 }
 
+.btn-lang {
+    color: var(--clr-accent);
+    background-color: transparent;
+    border: 1px solid var(--clr-accent);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-family: var(--font-primary);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-duration) ease;
+}
+.btn-lang:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
 .section-title {
     display: flex;
     align-items: center;

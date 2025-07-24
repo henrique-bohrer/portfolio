@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <title>Henrique Bressiani Bohrer - Desenvolvedor & Analista de Dados</title>
+  <title data-lang-key="pageTitle">Henrique Bressiani Bohrer - Desenvolvedor & Analista de Dados</title>
   <link rel="stylesheet" href="src/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -14,7 +13,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="canonical" href="https://henriquebohrer.netlify.app/">
 </head>
 
 <body>
@@ -39,11 +37,12 @@
     <nav class="navbar">
       <a href="#hero" class="logo">H.</a>
       <ul class="nav-links">
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#experience">Jornada</a></li>
-        <li><a href="#projects">Projetos</a></li>
-        <li><a href="#resume">Currículo</a></li>
-        <li><a href="#contact">Contato</a></li>
+        <li><a href="#about" data-lang-key="navAbout">Sobre</a></li>
+        <li><a href="#experience" data-lang-key="navExperience">Jornada</a></li>
+        <li><a href="#projects" data-lang-key="navProjects">Projetos</a></li>
+        <li><a href="#resume" data-lang-key="navResume">Currículo</a></li>
+        <li><a href="#contact" data-lang-key="navContact">Contato</a></li>
+        <li><button id="language-toggle" class="btn-lang">English</button></li>
       </ul>
       <div id="menu-toggle">
         <div class="bar"></div>
@@ -56,25 +55,25 @@
   <main>
     <div class="container">
       <section id="hero" class="section">
-        <p class="hero-intro">Oi, meu nome é</p>
+        <p class="hero-intro" data-lang-key="heroIntro">Oi, meu nome é</p>
         <h1 class="hero-title">Henrique Bressiani Bohrer.</h1>
-        <h2 class="hero-subtitle">Transformo ideias em web e dados em insights.</h2>
-        <p class="hero-description">
+        <h2 class="hero-subtitle" data-lang-key="heroSubtitle">Transformo ideias em web e dados em insights.</h2>
+        <p class="hero-description" data-lang-key="heroDescription">
           Atuo como desenvolvedor e aspirante a analista de dados, combinando a paixão por criar interfaces elegantes
           com a curiosidade de encontrar histórias nos números.
         </p>
-        <a href="#projects" class="btn">Conheça meus trabalhos</a>
+        <a href="#projects" class="btn" data-lang-key="heroButton">Conheça meus trabalhos</a>
       </section>
 
       <section id="about" class="section">
-        <h2 class="section-title">Sobre Mim</h2>
+        <h2 class="section-title" data-lang-key="aboutTitle">Sobre Mim</h2>
         <div class="about-content">
           <div class="about-text">
-            <p>Desde o início da minha jornada na tecnologia, sou movido pela curiosidade. Gosto de entender como as
-              coisas funcionam e, mais importante, como posso fazê-las funcionar melhor. Hoje, meu foco se divide entre
-              duas grandes paixões: o desenvolvimento de aplicações web que as pessoas gostem de usar e a análise de
-              dados para descobrir padrões e guiar decisões inteligentes.</p>
-            <p>Estas são algumas das ferramentas que uso no meu dia a dia:</p>
+            <p data-lang-key="aboutParagraph1">Desde o início da minha jornada na tecnologia, sou movido pela
+              curiosidade. Gosto de entender como as coisas funcionam e, mais importante, como posso fazê-las funcionar
+              melhor. Hoje, meu foco se divide entre duas grandes paixões: o desenvolvimento de aplicações web que as
+              pessoas gostem de usar e a análise de dados para descobrir padrões e guiar decisões inteligentes.</p>
+            <p data-lang-key="aboutParagraph2">Estas são algumas das ferramentas que uso no meu dia a dia:</p>
             <ul class="skills-list">
               <li>JavaScript (ES6+)</li>
               <li>PHP</li>
@@ -91,58 +90,58 @@
       </section>
 
       <section id="experience" class="section">
-        <h2 class="section-title">Minha Jornada</h2>
+        <h2 class="section-title" data-lang-key="experienceTitle">Minha Jornada</h2>
         <div class="experience-timeline">
           <div class="timeline-item">
             <div class="timeline-icon"><i class="fa-solid fa-briefcase"></i></div>
             <div class="timeline-content">
-              <p class="timeline-date">Julho 2025 - Presente</p>
-              <h3 class="timeline-title">Estagiário de TI <span class="timeline-company">@ TDF</span></h3>
-              <p class="timeline-description">Desenvolvo relatórios com a ferramenta do Power BI apresentando vendas
-                diárias, semanais e mensais da empresa. Facilitando o controle de meta dos funcionários e uma visão
-                geral da empresa.</p>
+              <p class="timeline-date" data-lang-key="exp1Date">Julho 2025 - Presente</p>
+              <h3 class="timeline-title" data-lang-key="exp1Title">Estagiário de TI <span class="timeline-company">@
+                  TDF</span></h3>
+              <p class="timeline-description" data-lang-key="exp1Description">Desenvolvo relatórios com a ferramenta do
+                Power BI apresentando vendas diárias, semanais e mensais da empresa. Facilitando o controle de meta dos
+                funcionários e uma visão geral da empresa.</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-icon"><i class="fa-solid fa-graduation-cap"></i></div>
             <div class="timeline-content">
-              <p class="timeline-date">Cursando - 5º Período</p>
-              <h3 class="timeline-title">Análise e Desenvolvimento de Sistemas <span class="timeline-company">@
-                  UniOPET</span></h3>
-              <p class="timeline-description">Aplicando conceitos de engenharia de software em projetos práticos e
-                aprofundando conhecimentos em PHP, Python, JavaScript e MySQL.</p>
+              <p class="timeline-date" data-lang-key="edu1Date">Cursando - 5º Período</p>
+              <h3 class="timeline-title" data-lang-key="edu1Title">Análise e Desenvolvimento de Sistemas <span
+                  class="timeline-company">@ UniOPET</span></h3>
+              <p class="timeline-description" data-lang-key="edu1Description">Aplicando conceitos de engenharia de
+                software em projetos práticos e aprofundando conhecimentos em PHP, Python, JavaScript e MySQL.</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-icon"><i class="fa-solid fa-graduation-cap"></i></div>
             <div class="timeline-content">
-              <p class="timeline-date">Concluído</p>
+              <p class="timeline-date" data-lang-key="edu2Date">Concluído</p>
               <a href="src/analista-de-bi.pdf" target="_blank" class="timeline-title-link">
-                <h3 class="timeline-title">
+                <h3 class="timeline-title" data-lang-key="edu2Title">
                   Curso de Analista de BI <span class="timeline-company">@ Escola DNC</span>
                   <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
                 </h3>
               </a>
-              <p class="timeline-description">Capacitação focada em transformar dados brutos em dashboards interativos
-                para
-                suportar decisões de negócio.</p>
+              <p class="timeline-description" data-lang-key="edu2Description">Capacitação focada em transformar dados
+                brutos em dashboards interativos para suportar decisões de negócio.</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-icon"><i class="fa-solid fa-briefcase"></i></div>
             <div class="timeline-content">
               <p class="timeline-date">2023 - 2025</p>
-              <h3 class="timeline-title">Atendimento ao Cliente <span class="timeline-company">@ SoftMarketing</span>
-              </h3>
-              <p class="timeline-description">Desenvolvi habilidades de comunicação e resolução de problemas no
-                atendimento direto ao cliente.</p>
+              <h3 class="timeline-title" data-lang-key="exp2Title">Atendimento ao Cliente <span
+                  class="timeline-company">@ SoftMarketing</span></h3>
+              <p class="timeline-description" data-lang-key="exp2Description">Desenvolvi habilidades de comunicação e
+                resolução de problemas no atendimento direto ao cliente.</p>
             </div>
           </div>
         </div>
       </section>
 
       <section id="projects" class="section">
-        <h2 class="section-title">Projetos que Tive Orgulho de Construir</h2>
+        <h2 class="section-title" data-lang-key="projectsTitle">Projetos que Tive Orgulho de Construir</h2>
         <ul class="projects-grid">
           <li class="project-card">
             <div class="project-card-header">
@@ -152,10 +151,11 @@
                   title="Ver ao Vivo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
             </div>
             <div class="project-card-body">
-              <h3 class="project-title"><a href="https://dekor-ai.webnode.page/" target="_blank">Hackathon - Dekor
-                  AI</a></h3>
-              <p class="project-description">Durante um Hackathon, colaborei na criação de um site-conceito que usaria
-                IA para visualizar pisos vinílicos em um ambiente real através da câmera do usuário.</p>
+              <h3 class="project-title"><a href="https://dekor-ai.webnode.page/" target="_blank"
+                  data-lang-key="proj1Title">Hackathon - Dekor AI</a></h3>
+              <p class="project-description" data-lang-key="proj1Description">Durante um Hackathon, colaborei na criação
+                de um site-conceito que usaria IA para visualizar pisos vinílicos em um ambiente real através da câmera
+                do usuário.</p>
             </div>
             <div class="project-card-footer">
               <ul class="project-tech-list">
@@ -176,10 +176,10 @@
               </div>
             </div>
             <div class="project-card-body">
-              <h3 class="project-title"><a href="https://quiz-prog.netlify.app/" target="_blank">Quiz de Programação</a>
-              </h3>
-              <p class="project-description">Desenvolvi um quiz interativo para ajudar outros entusiastas da programação
-                a testar e aprimorar seus conhecimentos de forma divertida.</p>
+              <h3 class="project-title"><a href="https://quiz-prog.netlify.app/" target="_blank"
+                  data-lang-key="proj2Title">Quiz de Programação</a></h3>
+              <p class="project-description" data-lang-key="proj2Description">Desenvolvi um quiz interativo para ajudar
+                outros entusiastas da programação a testar e aprimorar seus conhecimentos de forma divertida.</p>
             </div>
             <div class="project-card-footer">
               <ul class="project-tech-list">
@@ -193,21 +193,21 @@
       </section>
 
       <section id="resume" class="section">
-        <h2 class="section-title">Meu Currículo</h2>
+        <h2 class="section-title" data-lang-key="resumeTitle">Meu Currículo</h2>
         <div class="resume-content">
-          <p>Quer todos os detalhes da minha trajetória em um formato mais tradicional? Meu currículo completo está a um
-            clique de distância.</p>
-          <a href="src/curriculo-henrique-bohrer.pdf" target="_blank" class="btn"><i class="fa-solid fa-download"></i>
-            Baixar Currículo</a>
+          <p data-lang-key="resumeDescription">Quer todos os detalhes da minha trajetória em um formato mais
+            tradicional? Meu currículo completo está a um clique de distância.</p>
+          <a href="src/curriculo-henrique-bohrer.pdf" target="_blank" class="btn" data-lang-key="resumeButton"><i
+              class="fa-solid fa-download"></i> Baixar Currículo</a>
         </div>
       </section>
 
       <section id="contact" class="section">
-        <h2 class="section-title center">E agora?</h2>
-        <p class="contact-text">Atualmente estou buscando novas oportunidades e adoraria ouvir sobre projetos
-          interessantes. Se você tem uma ideia, uma pergunta ou apenas quer dizer um "oi", meu inbox está sempre aberto!
-        </p>
-        <a href="mailto:henrique300415@gmail.com" class="btn">Mande uma mensagem</a>
+        <h2 class="section-title center" data-lang-key="contactTitle">E agora?</h2>
+        <p class="contact-text" data-lang-key="contactDescription">Atualmente estou buscando novas oportunidades e
+          adoraria ouvir sobre projetos interessantes. Se você tem uma ideia, uma pergunta ou apenas quer dizer um "oi",
+          meu inbox está sempre aberto!</p>
+        <a href="mailto:henrique300415@gmail.com" class="btn" data-lang-key="contactButton">Mande uma mensagem</a>
       </section>
     </div>
   </main>
@@ -223,7 +223,7 @@
       <a href="https://www.instagram.com/henriquebbohrer/" target="_blank" aria-label="Instagram"><i
           class="fa-brands fa-instagram"></i></a>
     </div>
-    <p>Projetado e desenvolvido por Henrique Bressiani Bohrer</p>
+    <p data-lang-key="footerText">Projetado e desenvolvido por Henrique Bressiani Bohrer</p>
   </footer>
 
   <script src="src/script.js" defer></script>
