@@ -177,9 +177,46 @@ img { max-width: 100%; display: block; }
 .skills-list { display: grid; grid-template-columns: repeat(2, minmax(140px, 200px)); gap: 10px; margin-top: 20px; }
 .skills-list li { position: relative; padding-left: 20px; font-size: var(--fs-sm); }
 .skills-list li::before { content: '▹'; position: absolute; left: 0; color: var(--clr-accent); }
-.about-image { max-width: 300px; position: relative; border-radius: 4px; }
-.about-image::after { content:''; display: block; position: absolute; width:100%; height: 100%; border: 2px solid var(--clr-accent); top: 15px; left: 15px; border-radius: 4px; z-index: -1; transition: all var(--transition-duration) ease; }
-.about-image:hover::after { top: 10px; left: 10px; }
+.about-image {
+    max-width: 300px;
+    position: relative;
+    border-radius: 4px;
+    background-color: var(--clr-accent); /* Cor de fundo caso a imagem demore a carregar */
+}
+
+.about-image::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--clr-accent);
+    top: 20px;
+    left: 20px;
+    border-radius: 4px;
+    z-index: -1;
+    transition: all var(--transition-duration) ease;
+}
+
+/* A imagem em si */
+.about-image img {
+    position: relative;
+    border-radius: 4px;
+    mix-blend-mode: multiply; /* Efeito de cor interessante */
+    filter: grayscale(100%) contrast(1);
+    transition: all var(--transition-duration) ease;
+}
+
+/* EFEITO HOVER */
+.about-image:hover img {
+    filter: none;
+    mix-blend-mode: normal;
+}
+
+.about-image:hover::after {
+    top: 15px;
+    left: 15px;
+}
 
 /* --- SEÇÃO DE EXPERIÊNCIA - DESIGN DE TIMELINE CENTRAL --- */
 .experience-timeline { position: relative; max-width: 800px; margin-inline: auto; }
